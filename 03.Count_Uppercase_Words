@@ -1,0 +1,19 @@
+using System;
+using System.Linq;
+
+namespace _03.Count_Uppercase_Words
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           Func<string, bool> predicat = str => str[0] == str.ToUpper()[0];
+
+             Console.ReadLine()
+                 .Split(" ")
+                 .Where(w => predicat(w))
+                 .ToList()
+                 .ForEach(w => Console.WriteLine(w));
+        }
+    }
+}
